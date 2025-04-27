@@ -32,7 +32,41 @@ body {
         @media (min-width: 1200px) {
           /* Add any specific styles for very large screens */
         }
+        .container {
+          display: flex;
+          flex-direction: column; /* Stack items on phones */
+          align-items: center;
+        }
 
+        @media (min-width: 768px) {
+          .container {
+            flex-direction: row; /* Arrange side-by-side on tablets/desktops */
+            justify-content: space-around;
+          }
+        }
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr; /* Single column on phones */
+          gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+          .grid-container {
+            grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+          }
+        }
+
+        @media (min-width: 992px) {
+          .grid-container {
+            grid-template-columns: repeat(3, 1fr); /* Three columns on desktops */
+          }
+        }
+        img {
+          max-width: 100%; /* Make images fit their container */
+          height: auto;
+          display: block; /* Remove extra space below images */
+        }
+    
 .navbar {
   position: fixed; /* Keep it at the top even when scrolling */
   top: 0;          /* Position at the very top */
