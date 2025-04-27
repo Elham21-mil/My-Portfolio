@@ -5,68 +5,28 @@ body {
     margin: 0; 
 }
 /*HOME PAGE*/
-/* styles.css */
+    /* Default styles for larger screens */
+    .container {
+      display: flex; /* Use flexbox to position paragraphs side-by-side */
+      justify-content: space-between; /* Distribute space evenly */
+  }
 
-/* Overall Navbar Styling */
-        /* Styles for tablets (screens 768px and wider) */
-        @media (min-width: 768px) {
-          body {
-            margin: 20px; /* Larger margins for tablets */
-            font-size: 16px; /* Larger font size */
-          }
+  .paragraph {
+      width: 48%; /* Give each paragraph a width of 48% (allowing for a little margin) */
+  }
 
-          h1, h2, h3 {
-            text-align: left; /* Example: Align headings left on tablets */
-          }
-        }
+  /* Media query for smaller screens (e.g., phones) */
+  @media (max-width: 768px) {  /* Adjust 768px as needed */
+      .container {
+          display: block; /* Change to block layout to stack paragraphs vertically */
+      }
 
-        /* Styles for desktops (screens 992px and wider) */
-        @media (min-width: 992px) {
-          body {
-            margin: 30px; /* Even larger margins for desktops */
-            font-size: 18px;
-          }
-        }
-
-        /* Styles for large desktops (screens 1200px and wider) */
-        @media (min-width: 1200px) {
-          /* Add any specific styles for very large screens */
-        }
-        .container {
-          display: flex;
-          flex-direction: column; /* Stack items on phones */
-          align-items: center;
-        }
-
-        @media (min-width: 768px) {
-          .container {
-            flex-direction: row; /* Arrange side-by-side on tablets/desktops */
-            justify-content: space-around;
-          }
-        }
-        .grid-container {
-          display: grid;
-          grid-template-columns: 1fr; /* Single column on phones */
-          gap: 20px;
-        }
-
-        @media (min-width: 768px) {
-          .grid-container {
-            grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
-          }
-        }
-
-        @media (min-width: 992px) {
-          .grid-container {
-            grid-template-columns: repeat(3, 1fr); /* Three columns on desktops */
-          }
-        }
-        img {
-          max-width: 100%; /* Make images fit their container */
-          height: auto;
-          display: block; /* Remove extra space below images */
-        }
-    
+      .paragraph {
+          width: 100%; /* Make each paragraph take up the full width */
+          margin-bottom: 1em; /* Add some space between paragraphs */
+      }
+  }
+  
 .navbar {
   position: fixed; /* Keep it at the top even when scrolling */
   top: 0;          /* Position at the very top */
