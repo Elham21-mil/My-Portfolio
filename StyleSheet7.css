@@ -1,6 +1,6 @@
 ﻿
 body {
-    background: linear-gradient(90deg, #55534f 0%, #4e4e4d 30%, #696866 70%, #807e7b 100%);
+    background-color: gray;
     height: 100vh; /* Optional: Make the gradient fill the entire viewport height */
     margin: 0; 
 }
