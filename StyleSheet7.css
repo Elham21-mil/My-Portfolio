@@ -26,7 +26,7 @@ body {
           margin-bottom: 1em; /* Add some space between paragraphs */
       }
   }
-  
+
 .navbar {
   position: fixed; /* Keep it at the top even when scrolling */
   top: 0;          /* Position at the very top */
