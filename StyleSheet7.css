@@ -8,6 +8,31 @@ body {
 /* styles.css */
 
 /* Overall Navbar Styling */
+        /* Styles for tablets (screens 768px and wider) */
+        @media (min-width: 768px) {
+          body {
+            margin: 20px; /* Larger margins for tablets */
+            font-size: 16px; /* Larger font size */
+          }
+
+          h1, h2, h3 {
+            text-align: left; /* Example: Align headings left on tablets */
+          }
+        }
+
+        /* Styles for desktops (screens 992px and wider) */
+        @media (min-width: 992px) {
+          body {
+            margin: 30px; /* Even larger margins for desktops */
+            font-size: 18px;
+          }
+        }
+
+        /* Styles for large desktops (screens 1200px and wider) */
+        @media (min-width: 1200px) {
+          /* Add any specific styles for very large screens */
+        }
+
 .navbar {
   position: fixed; /* Keep it at the top even when scrolling */
   top: 0;          /* Position at the very top */
